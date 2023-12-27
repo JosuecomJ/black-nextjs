@@ -15,8 +15,6 @@ export const fetchProducts = async () => {
 }
 
 export const fetchProduct = async (id: string | number) => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/products/${id}`)
-  const data = await response.json()
-  const product: ProductType = data.product
+  const product: ProductType = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/products/${id}`).then(res => res.json())
   return product
 }
