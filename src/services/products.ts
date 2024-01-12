@@ -20,4 +20,3 @@ export const fetchProduct = async (id: string | number) => {
   const product: ProductType = data
   return product;
 }
-
