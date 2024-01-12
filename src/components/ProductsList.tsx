@@ -6,9 +6,6 @@ import { ProductType , } from "../services/products"
 import ProductCard from "./ProductCard"
 
 
-
-
-
 type ProductListProps = {
   products: ProductType[]
 }
