@@ -22,18 +22,18 @@ const CartTableRow = (props: {
                         <Image
                             src={props.entry.product.imageUrl}
                             alt={props.entry.product.name}
-                            height={500}
-                            width={600}
+                            height={60}
+                            width={60}
                         />
                     </Col>
-                    <Col xs={8} md={10} lg={11}>
+                    <Col xs={8} md={10} lg={11} className="small">
                         {props.entry.product.name}
                     </Col>
                 </Row>
             </td>
-            <td>R$ {props.entry.product.price}</td>
-            <td>{props.entry.quantity}</td>
-            <td>R$ {(props.entry.product.price * props.entry.quantity)}</td>
+            <td className="small">R$ {props.entry.product.price}</td>
+            <td className="small">{props.entry.quantity}</td>
+            <td className="small">R$ {(props.entry.product.price * props.entry.quantity)}</td>
             <td>
                 <Button
                     color="primary"
@@ -84,11 +84,11 @@ export default function CartTable() {
     }, [cart])
 
     return (
-        <Table responsive className="align-middle" style={{ minWidth: '32rem' }}>
+        <Table responsive className="table table-sm align-middle" style={{ minWidth: '32rem' }}>
             <thead>
                 <tr>
                     <th>Produto</th>
-                    <th>Preço</th>
+                    <th >Preço</th>
                     <th>Qtd.</th>
                     <th>Total</th>
                 </tr>
