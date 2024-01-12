@@ -52,5 +52,4 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     </Row>
   )
 }
-
 export default ProductDetails
